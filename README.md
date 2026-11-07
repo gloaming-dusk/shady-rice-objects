@@ -19,9 +19,9 @@ object with a thick ink outline and a hard offset shadow:
   in tangerine), with their actions; the control center keeps the last few.
 
 ```bash
-nix develop -c ./tools/build.sh
-nix develop -c ./rices/objects/run.sh          # nested in a Wayland session
-nix develop -c ./rices/objects/run-native.sh   # directly on a VT (DRM + libinput)
+SHADY_ROOT=~/src/shady ./run.sh          # nested in a Wayland session
+SHADY_ROOT=~/src/shady ./run-native.sh   # directly on a VT (DRM + libinput)
+./install.sh                             # as your Shady session's rice
 ```
 
 | Keys | |
@@ -42,3 +42,7 @@ hidden.
 
 The typeface is [Bricolage Grotesque](https://github.com/ateliertriay/bricolage)
 (`fonts/`, SIL Open Font License 1.1, see `fonts/OFL.txt`).
+
+`SHADY_ROOT` is a [Shady](https://github.com/gloaming-dusk/shady) checkout with a
+build in `build/` (`./tools/build.sh`), by default `../shady` next to this
+repository.
